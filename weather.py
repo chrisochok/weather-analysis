@@ -36,7 +36,7 @@ def read_weather_files():
                 if weather_df.empty:
                     raise TypeError('Empty dataframe. Check source files')
                 weather_df['ObservationDate'] = pd.to_datetime(weather_df['ObservationDate'])
-                weather_df.isna().sum()
+                # weather_df.isna().sum()
                 weather_df[['WindGust', 'Visibility', 'Pressure']] = weather_df[['WindGust', 'Visibility', 'Pressure']].fillna(0)
                 weather_df['Country'] = weather_df['Country'].fillna('')             
         return weather_df
@@ -52,7 +52,6 @@ def convert_to_parquet():
     Helper    
         help(weather.convert_to_parquet) '''
     try:
-        # weather_df = read_weather_files(weather_20160301_csv)
         weather_df = read_weather_files()
         weather_df.to_parquet('weather_df_pq.parquet.gzip', compression='gzip')
         weather_df_pq = pd.read_parquet('weather_df_pq.parquet.gzip')
@@ -109,7 +108,6 @@ def hottest_day_region():
 
 
 if __name__ == '__main__':
-    # pass
     hottest_day()
     temperature_on_the_day()
     hottest_day_region()

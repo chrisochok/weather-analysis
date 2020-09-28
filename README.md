@@ -65,7 +65,7 @@ Repro steps via cli:
 ASSUMPTIONS:
 
 Upon previewing the source data:
- 1. The 'ObservationDate' field should be 'date' datatype so was coerced to 'datetime' from 'str' data type for querying accuracy.
+ 1. The 'ObservationDate' field should be 'date' data type so was coerced to 'datetime' from 'str' data type for querying accuracy.
  2. 'NaN' values were identified in the following numeric fields and have been imputted with zeros - [WindGust - 151411, Visibility - 26493, Pressure - 14820].
  3. 'NaN' values (27760) were identified in the 'Country' field. These were replaced with empty strings.
  4. "The converted data should be queryable to answer the following question." - it's assumed that this statement refers to converting data file to parquet columnar store before further analysis.
