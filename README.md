@@ -4,7 +4,7 @@
 ```
   Script that reads in the weather data (194697 rows x 15 columns) and coverts into parquet data format. Performs minor transformations as detailed below under `Assumptions`. Then answers the following questions (individual python functions):
 
-  a. Which data was the hottest day?
+  a. Which date was the hottest day?
   b. Temperature on that day
   c. Region was the hottest day
 
