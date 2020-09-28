@@ -1,0 +1,7 @@
+file_path.py
+weather_df_pq.parquet.gzip
+mini_pycallgraph.png
+node_modules/
+bin/
+.env sample
+pyvenv.cfg
